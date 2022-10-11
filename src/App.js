@@ -1,13 +1,38 @@
-
 import './App.css';
+import {createBrowserRouter,RouterProvider} from "react-router-dom"
+import Main from './layouts/Main';
+import Home from './component/Home'
+import Quiz from './component/Quiz'
+import Question from './component/Question';
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main></Main>,
+      children:[
+        {
+          path:'/',
+          element:<Home></Home>
+        },
+        {
+          path:'/quiz',
+          element:<Quiz></Quiz>
+        },
+        {
+          path:'/question',
+          element:<Question></Question>
+        }
+      ]
+    },
+   
+  ]);
+ 
   return (
     <div className="App">
-      <h1 className='text-5xl bg-red-500'>life of pie</h1>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      
+        <RouterProvider router={router} />
 
     </div>
   );
