@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Chart from './Chart';
 
 
+
 const Quiz = () => {
    const lod= useLoaderData();
    const quizes=lod.data;
@@ -11,7 +12,7 @@ const Quiz = () => {
   
    
     return (
-        <div>
+        <div className='container-quiz flex justify-center items-center  gap-4  m-5'>
         {/* <h2>ji:{quizes.length}</h2> */}
         {
             quizes.map(quiz=><Chart key={quiz.id} quiz={quiz}></Chart>)

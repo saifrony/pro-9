@@ -1,4 +1,5 @@
 import React from 'react';
+import Quiz from './Quiz';
 
 const Home = () => {
     return (
@@ -19,7 +20,9 @@ const Home = () => {
 		<img src="../1.jpg" alt="" className="object-cover w-full rounded-md xl:col-span-3 dark:bg-gray-500" />
 	</div>
 </section>
+
         </div>
+		
     );
 };
 
