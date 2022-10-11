@@ -5,6 +5,7 @@ import Home from './component/Home'
 import Quiz from './component/Quiz'
 import Question from './component/Question';
 import Error from './component/Error'
+import Life from './component/Life';
 
 
 function App() {
@@ -21,12 +22,20 @@ function App() {
         },
         {
           path:'/quiz',
-          element:<Quiz></Quiz>,
+          
           loader : ()=>{
             return fetch('https://openapi.programming-hero.com/api/quiz')
-          }
+          },
+          element:<Quiz></Quiz>,
          
 
+        },
+        {
+          path:'/quiz/:id',
+          loader : ({params})=>{
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+          },
+          element:<Life></Life>
         },
         {
           path:'/question',
