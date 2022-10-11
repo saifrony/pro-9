@@ -4,23 +4,29 @@ import Main from './layouts/Main';
 import Home from './component/Home'
 import Quiz from './component/Quiz'
 import Question from './component/Question';
+import Error from './component/Error'
+
 
 function App() {
 
   const router = createBrowserRouter([
     {
       path: "/",
-      
       element: <Main></Main>,
+      errorElement: <Error></Error>, 
       children:[
         {
-          path:'/',
-          
+          index:true,
           element:<Home></Home>
         },
         {
           path:'/quiz',
-          element:<Quiz></Quiz>
+          element:<Quiz></Quiz>,
+          loader : ()=>{
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          }
+         
+
         },
         {
           path:'/question',
