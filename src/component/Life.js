@@ -12,7 +12,7 @@ const Life = () => {
    
     return (
         <div>
-            <h2>hi</h2>
+            
             {
                 answers.map(data=><Answer key={data.id} data={data}></Answer>)
             } 
