@@ -3,17 +3,19 @@ import { useLoaderData } from 'react-router-dom';
 import Answer from './Answer';
 
 const Life = () => {
-    const data= useLoaderData();
+    const datas= useLoaderData();
+    const answers=datas.data.questions;
+
+    // console.log(answers)
     
     
-
-
    
     return (
         <div>
+            <h2>hi</h2>
             {
-                data.map(answer=><Answer key={answer.id} answer={answer}></Answer>)
-            }
+                answers.map(data=><Answer key={data.id} data={data}></Answer>)
+            } 
         </div>
     );
 };
