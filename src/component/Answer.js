@@ -7,7 +7,7 @@ const Answer = ({data}) => {
     return (
         <div className='border'>
            <p>{question}</p>
-           <h2 className='bd-red-700'>{correctAnswer}</h2>
+           <h2 className='bg-red-700'>{correctAnswer}</h2>
            <div>
             
                 <ul> 
