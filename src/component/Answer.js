@@ -1,11 +1,12 @@
 import React from 'react';
+import QAnswer from './QAnswer';
 
 const Answer = ({data}) => {
-    const {question,options,correctAnswer}= data
-   console.log(data)
+ const {question,options,correctAnswer}= data
+//    console.log(data)
    
     return (
-        <div className='border'>
+        <div className='border '>
            <p>{question}</p>
            <h2 className='bg-red-700'>{correctAnswer}</h2>
            <div>
