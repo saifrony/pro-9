@@ -1,12 +1,13 @@
 import React from 'react';
 
 const Answer = ({data}) => {
-    const {question,options}= data
+    const {question,options,correctAnswer}= data
    console.log(data)
    
     return (
         <div className='border'>
            <p>{question}</p>
+           <h2 className='bd-red-700'>{correctAnswer}</h2>
            <div>
             
                 <ul> 
